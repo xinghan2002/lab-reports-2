@@ -13,7 +13,7 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
  And the following the fix we made to the code: \
  ![Image](fix1.png)
  
-2. **Index Out of Bound**: When we ran [this file](https://github.com/kcyy127/markdown-parser/edit/main/test-file3.md) on the programm, there was an index out of bound exception being trhown, this is becuase when taking the substring from `openParen + 1` to `closeParen`, the index of `closeParen` can't be found in the last iteration. The following are the failure output:
+2. **Index Out of Bound**: When we ran [this file](https://github.com/kcyy127/markdown-parser/edit/main/test-file3.md) on the programm, which contains a half-link, there was an index out of bound exception being trhown, this is becuase when taking the substring from `openParen + 1` to `closeParen`, the index of `closeParen` can't be found in the last iteration. The following are the failure output:
 
 `xinghanwang@Xinghans-MacBook-Pro markdown-parser-main % java MarkdownParse test-file3.md
 Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Range [81, -1) out of bounds for length 99
@@ -30,5 +30,8 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Range [81,
         at MarkdownParse.main(MarkdownParse.java:39)`
         
  And the following the fix we made to the code: \
+  ![Image](fix2.png)
+  
+3. **A fake link**: When we ran [this file](https://github.com/kcyy127/markdown-parser/edit/main/test-file4.md) on the programm, which contains a fake link, the program
 
  
