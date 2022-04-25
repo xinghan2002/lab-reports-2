@@ -32,6 +32,12 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Range [81,
  And the following the fix we made to the code: \
   ![Image](fix2.png)
   
-3. **A fake link**: When we ran [this file](https://github.com/kcyy127/markdown-parser/edit/main/test-file4.md) on the programm, which contains a fake link, the program
+3. **A fake link**: When we ran [this file](https://github.com/kcyy127/markdown-parser/edit/main/test-file4.md) on the programm, which contains a fake link, the program still prints out the "fake link" in the output. This is because he program didn't take account into the `\` sign which falsify the validity of a link.  The following are the failure output:
+
+`xinghanwang@Xinghans-MacBook-Pro markdown-parser-main % java MarkdownParse test-file4.md`\
+`[fake_link, actual_link.html]`
+
+And the following are the fix to the program:\
+ ![Image](fix3.png)
 
  
